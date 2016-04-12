@@ -1,0 +1,4 @@
+---
+:enabled: http
+:tftproot: /var/lib/tftpboot
+:tftp_servername: REPLACE_HOST

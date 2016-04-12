@@ -1,0 +1,5 @@
+---
+:trusted_hosts: []
+:daemon: false
+:bind_host: localhost
+:http_port: 8000

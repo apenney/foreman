@@ -1,0 +1,3 @@
+---
+:enabled: http
+:bmc_default_provider: ipmitool

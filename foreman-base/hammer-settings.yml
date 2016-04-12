@@ -1,0 +1,3 @@
+:foreman:
+  # Enable/disable foreman commands
+  :enable_module: true
