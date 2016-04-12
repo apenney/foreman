@@ -1,2 +1,3 @@
 #!/bin/sh
-exec /usr/share/foreman-proxy/bin/smart-proxy >>/var/log/daemon.log 2>&1
+cd /usr/share/smart-proxy
+exec /usr/share/smart-proxy/bin/smart-proxy >>/var/log/daemon.log 2>&1

@@ -20,5 +20,6 @@ COPY settings.yml /usr/share/smart-proxy/config/settings.yml
 RUN mkdir /etc/service/foreman-proxy
 COPY setup_proxy.sh /etc/my_init.d/00-setup_proxy.sh
 COPY foreman-proxy.sh /etc/service/foreman-proxy/run
+RUN chown -R app /usr/share/smart-proxy
 
 CMD ["/sbin/my_init"]
