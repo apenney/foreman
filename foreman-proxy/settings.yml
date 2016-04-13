@@ -1,5 +1,4 @@
 ---
-:trusted_hosts: []
 :daemon: false
 :bind_host: '*'
-:http_port: 8080
+:http_port: 8888

@@ -17,7 +17,8 @@ RUN tar xf dhcp-${DHCPD_VERSION}.tar.gz && cd dhcp-${DHCPD_VERSION} && \
  
 COPY dhcpd.conf /etc/dhcp/dhcpd.conf
 COPY setup_dhcpd.sh /etc/my_init.d/00-setup_dhcpd.sh
-COPY dhcp.yml /usr/share/smart-proxy/config/dhcp.yml
+COPY dhcp.yml /usr/share/smart-proxy/config/settings.d/dhcp.yml
+COPY dhcp_isc.yml /usr/share/smart-proxy/config/settings.d/dhcp_isc.yml
 
 # Set up runit
 RUN mkdir /etc/service/dhcpd

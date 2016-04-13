@@ -9,7 +9,7 @@ RUN apt-get update && \
 
 # Install smart proxy
 WORKDIR /usr/share
-RUN git clone git://github.com/theforeman/smart-proxy.git
+RUN git clone git://github.com/theforeman/smart-proxy.git -b 1.11-stable
 
 WORKDIR /usr/share/smart-proxy
 RUN bundle install --without puppet puppetca test windows development --system
@@ -20,6 +20,6 @@ COPY settings.yml /usr/share/smart-proxy/config/settings.yml
 RUN mkdir /etc/service/foreman-proxy
 COPY setup_proxy.sh /etc/my_init.d/00-setup_proxy.sh
 COPY foreman-proxy.sh /etc/service/foreman-proxy/run
-RUN chown -R app /usr/share/smart-proxy
+RUN mkdir /var/log/foreman-proxy && chown -R app /usr/share/smart-proxy
 
 CMD ["/sbin/my_init"]

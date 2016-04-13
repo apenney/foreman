@@ -1,0 +1,5 @@
+---
+# Can be true, false, or http/https to enable just one of the protocols
+:config: /etc/dhcp/dhcpd.conf
+:leases: /persistent/dhcpd.leases
+:omapi_port: 7911
